@@ -1,4 +1,4 @@
-# Election 1
+![image](https://github.com/rsnchzl/election-1/assets/120066124/6f64be7a-7c64-412a-9bea-a5dad54e5247)# Election 1
 Solving Vulnhub's Election 1 machine.
 
 <div>
@@ -44,9 +44,21 @@ Solving Vulnhub's Election 1 machine.
   <br/>
   Si comprobamos la versión del servicio apache que se esta ejecutando por el puerto 80 (httpd 2.4.29) descubrimos que estamos ante un Ubuntu Bionic. <br/>
 
-  El siguiente paso sera lanzar el script http-enum de nmap sobre el puerto 80 para que detecte algunas rutas existentes en la página web <br/>
+  El siguiente paso sera lanzar el script http-enum de nmap sobre el puerto 80 para que detecte algunas rutas existentes de la página web <br/>
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotsnmaphttpenum.png"/> <br/>
   <br/>
+  Asi es como descubrimos la ruta "robots.txt", si accedemos a ella podremos descubrir lo siguiente: 
+  <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotsrobotstxt.png"/> <br/>
+  <br/>
+  Nos centramos en la palabra "election", investigando un poco descubrimos que hay una ruta con su mismo nombre, si accedemos a la ruta veremos una página web sobre una votación hacia un candidato.
+  Es hora de descubrir mas rutas dentro de election, para ello usaremos gobuster junto con el diccionario 2.3 medium de Seclists
+  <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotgobuster.png"/> <br/>
+  <br/>
+  Podemos observar que nos descubre varias rutas, pero nos centraremos en la ruta "admin", si accedemos a ella veremos un simple login. Si jugamos de nuevo con la herramienta gobuster para descubrir nuevas rutas en la ruta admin.
+  <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotgobusteradmin.png"/> <br/>
+  <br/>
+  Entre las rutas reportadas esta la ruta "logs" que si accedemos a ella y descargamos el archivo "system.log" en su interior veremos lo que parece ser un usuario y una contraseña
+  <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotssystemcatlog.png"/> <br/>
+  <br/>
   
-  
-</div>
+</ div>
