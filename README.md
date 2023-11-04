@@ -37,7 +37,6 @@ Solving Vulnhub's Election 1 machine.
 
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotsnmap.png"/> <br/>
   <br/>
-  Ahora sabemos que hay un servicio http que se ejecuta en el puerto 80 y un servicio ssh que se ejecuta en el puerto 22.
 
   We will also launch some basic reconnaissance scripts to detect the versions of the services that are running in addition to other data, for this we will use nmap again with the -sCV parameter on ports 22 and 80.
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotsnmapscv.png"/> <br/> 
@@ -69,7 +68,7 @@ Solving Vulnhub's Election 1 machine.
   Well, it is time to escalate privileges by becoming a privileged user(root), first we will search if there is any binary with the SUID permission granted with the find tool searching from the raid for permission 4000(SUID) 
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotfindsuid.png"/> <br/>
   </br>
-  Asi veremos que hay un binario en la ruta /usr/local/Serv-U/Serv-U donde el propietario es root, por lo tanto al ejecutar este comando con nuestro usuario actual (love) estaremos ejecutandolo como si fuesemos el usuario root.
+  So we will see that there is a binary in the path /usr/local/Serv-U/Serv-U where the owner is root, therefore when executing this command with our current user (love) we will be executing it as if we were the root user.
   Researching about "Serv-U" you will discover that there are several exploits to escalate privileges, the script I used can be found [here](https://github.com/rsnchzl/election-1/blob/main/exploits/exploitprivilageescalation.c), developed in C language. Just copy the script on the victim machine and gcc it.
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotexploit.png"/> <br/>
   </br>
