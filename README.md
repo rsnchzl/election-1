@@ -60,5 +60,9 @@ Solving Vulnhub's Election 1 machine.
   Entre las rutas reportadas esta la ruta "logs" que si accedemos a ella y descargamos el archivo "system.log" en su interior veremos lo que parece ser un usuario y una contraseña
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotssystemcatlog.png"/> <br/>
   <br/>
+  Recordemos el otro puerto que estaba abierto en la máquina victima, el puerto 22 perteneciente al servicio ssh, si introducimos el usuario y la contraseña otorgada en el archivo "system.log" podremos acceder a la máquina victima con el usuario "love".
+  <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotssh.png"/><br/>
+  <br/>
   
-</ div>
+  
+</div>
