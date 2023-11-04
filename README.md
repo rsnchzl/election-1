@@ -5,10 +5,9 @@ Solving Vulnhub's Election 1 machine.
   <h2>Index</h2>
   <h5>1. Introduction<h5>
   <h5>2. Installation and setup</h5>
-  <h5>3. Enumeration and recognition</h5>
-  <h5>4. Vulnerability analysis</h5>
-  <h5>5. Exploitation</h5>
-  <h5>6. Conclusion</h5>
+  <h5>3. Solving the machine</h5>
+
+  <h5>4. Conclusion</h5>
 </div>
 
 <div>
@@ -76,4 +75,6 @@ Solving Vulnhub's Election 1 machine.
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotexploitexecutation.png"/> <br/>
   <br/>
 
+<h3>Conclusion</h3>
+This machine is useful for learning about file leaks and practicing your recognition and enumeration skills, as well as practicing about SUID file abuse for privilege escalation.
 
