@@ -31,4 +31,6 @@ Solving Vulnhub's Election 1 machine.
   
   Una vez tengamos identificado la dirección IP de la máquina victima lanzaremos un ping -c 1 "ip-maquina-victima" para comprobar si recibimos respuesta, y de paso identificar el sistema operativo de la máquina victima gracias al ttl.
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/sceenshotsping.png"/> <br/>
+  <br/>
+  Bien, ahora sabemos que el ttl de la máquina victima es 64, por lo tanto muy probablemente el sistema operativo de la máquina victima sea Linux.
 </div>
