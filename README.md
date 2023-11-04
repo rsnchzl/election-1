@@ -58,7 +58,7 @@ Solving Vulnhub's Election 1 machine.
   We can see that it discovers several routes, but we will focus on the "admin" route, if we access it we will see a simple login. If we play again with the gobuster tool to discover new routes in the admin route.
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotgobusteradmin.png"/> <br/>
   <br/>
-  Among the routes reported is the "logs" route that if we access it and download the "system.log" file inside we will see what appears to be a user and a password.
+  Among the routes reported is the "logs" route that if we access it and download the "system.log" file inside we will see what appears to be a user and a password. <br/>
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotssystemcatlog.png"/> <br/>
   <br/>
   Let's remember the other port that was open on the victim machine, port 22 belonging to the ssh service, if we enter the user and password given in the "system.log" file we will be able to access the victim machine with the user "love".
