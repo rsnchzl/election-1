@@ -32,5 +32,10 @@ Solving Vulnhub's Election 1 machine.
   Una vez tengamos identificado la dirección IP de la máquina victima lanzaremos un ping -c 1 "ip-maquina-victima" para comprobar si recibimos respuesta, y de paso identificar el sistema operativo de la máquina victima gracias al ttl.
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/sceenshotsping.png"/> <br/>
   <br/>
-  Bien, ahora sabemos que el ttl de la máquina victima es 64, por lo tanto muy probablemente el sistema operativo de la máquina victima sea Linux.
+  Bien, ahora sabemos que el ttl de la máquina victima es 64, por lo tanto muy probablemente el sistema operativo de la máquina victima sea Linux. <br/>
+  El siguiente paso será  escanear los puertos de la ip de la máquina victima para detectar los servicios que estan corriendo por detras, para ello usaremos la herramienta nmap y le indicaremos con -p- que queremos escanear todos los puertos existentes (65535) en la dirección ip de la máquina victima.
+
+  <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotsnmap.png"/> <br/>
+  <br/>
+  Ahora sabemos que hay un servicio http corriendo por el pureto 80 y otro servicio ssh corriendo por el puerto 22
 </div>
