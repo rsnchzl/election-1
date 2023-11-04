@@ -1,5 +1,5 @@
 # Election 1
-Solving Vulnhub's Election 1 machine
+Solving Vulnhub's Election 1 machine.
 
 <div>
   <h2>Index</h2>
