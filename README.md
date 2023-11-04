@@ -15,3 +15,8 @@ Solving Vulnhub's Election 1 machine.
   <h2>1. Introduction</h2>
  This vulnerable Vulnhub machine presents similar difficulty to ejptv2 certification at the intrusion stage and similar difficulty to OSCP certification at the privilege escalation stage. Ideal to prepare for ejptv2 and OSCP certifications.
 </div>
+
+<div>
+  <h2>2. Installation and setup</h2>
+  First, we need to install the .7z file available <a src="https://www.vulnhub.com/entry/election-1,503"/>here</a> and extract it to get the .ova file. When we have the .ova file we just need to open it to import it into VirtualBox, VMware or your favourite platform.  Once imported we must make sure that the network adapter is in bridge mode. Now we can start with the enumeration phase.
+</div>
