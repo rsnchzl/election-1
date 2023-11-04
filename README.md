@@ -23,7 +23,7 @@ Solving Vulnhub's Election 1 machine.
 
   First, we need to install the .7z file available [here](https://www.vulnhub.com/entry/election-1,503/) and extract it to get the .ova file. When we have the .ova file we just need to open it to import it into VirtualBox, VMware or your favourite platform.  Once imported we must make sure that the network adapter is in bridge mode. Now we can start with the enumeration phase.
 
-<div>
+
   <h2>  3. Enumeration and recognition</h2>
   The first thing to do is to identify the IP of the victim machine, for this we can play with "arp-scan --localnet --ignoredups", this will identify the IP addresses assigned in your local network (thanks to the --localnet parameter).<br/>
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotsarpscan.png"/> <br/>
@@ -63,6 +63,9 @@ Solving Vulnhub's Election 1 machine.
   Recordemos el otro puerto que estaba abierto en la máquina victima, el puerto 22 perteneciente al servicio ssh, si introducimos el usuario y la contraseña otorgada en el archivo "system.log" podremos acceder a la máquina victima con el usuario "love".
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotssh.png"/><br/>
   <br/>
-  
-  
-</div>
+
+  Bien, es hora de escalar privilegios convirtiendonos en un usuario privilegiado(root), en primer lugar buscaremos si hay algun binario con el permiso SUID otorgado con la herramienta find buscando desde la raid por el permiso 4000(SUID) 
+  <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotfindsuid.png"/>
+  Asi veremos que hay un binario en la ruta /usr/local/Serv-U/Serv-U donde el propietario es root, por lo tanto al ejecutar este comando con nuestro usuario actual (love) estaremos ejecutandolo como si fuesemos el usuario root.
+  Investigando sobre "Serv-U" descubriraras que hay diversos exploits para escalar privilegios, el script que he usado puedes encontrarlo [here](https://github.com/rsnchzl/election-1/blob/main/exploits/exploitprivilageescalation.c), desarrollado en el lenguaje C.
+
