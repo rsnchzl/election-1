@@ -69,7 +69,7 @@ Solving Vulnhub's Election 1 machine.
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotfindsuid.png"/> <br/>
   </br>
   So we will see that there is a binary in the path /usr/local/Serv-U/Serv-U where the owner is root, therefore when executing this command with our current user (love) we will be executing it as if we were the root user.
-  Researching about "Serv-U" you will discover that there are several exploits to escalate privileges, the script I used can be found [here](https://github.com/rsnchzl/election-1/blob/main/exploits/exploitprivilageescalation.c), developed in C language. Just copy the script on the victim machine and gcc it.
+  Researching about "Serv-U" you will discover that there are several exploits to escalate privileges, the script I used can be found [here](https://github.com/rsnchzl/election-1/blob/main/exploits/exploitprivilageescalation.c), developed in C language. Just copy the script on the victim machine and gcc it. <br/>
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotexploit.png"/> <br/>
   </br>
   Now, you just have to run to move to the root user :)
