@@ -13,4 +13,5 @@ Solving Vulnhub's Election 1 machine.
 
 <div>
   <h2>1. Introduction</h2>
+  This vulnerable  machine of Vulnhub presents a similar difficulty to ejptv2 certification in the  intrusion and a similar difficulty to OSCP certification in privilege escalation.
 </div>
