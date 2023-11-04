@@ -37,5 +37,16 @@ Solving Vulnhub's Election 1 machine.
 
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotsnmap.png"/> <br/>
   <br/>
-  Ahora sabemos que hay un servicio http corriendo por el pureto 80 y otro servicio ssh corriendo por el puerto 22
+  Ahora sabemos que hay un servicio http corriendo por el puerto 80 y otro servicio ssh corriendo por el puerto 22. <br/>
+
+  Tambien lanzaremos unos scripts básicos de reconocimiento para detectar las versiones de los servicios que estan corriendo ademas de otros datos, para ello usaremos de nuevo nmap con el parametro -sCV en los puertos 22 y 80.
+  <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotsnmapscv.png"/> <br/> 
+  <br/>
+  Si comprobamos la versión del servicio apache que se esta ejecutando por el puerto 80 (httpd 2.4.29) descubrimos que estamos ante un Ubuntu Bionic. <br/>
+
+  El siguiente paso sera lanzar el script http-enum de nmap sobre el puerto 80 para que detecte algunas rutas existentes en la página web
+  <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotsnmaphttpenum.png"/> <br/>
+  <br/>
+  
+  
 </div>
