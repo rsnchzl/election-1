@@ -1,4 +1,4 @@
-![image](https://github.com/rsnchzl/election-1/assets/120066124/6f64be7a-7c64-412a-9bea-a5dad54e5247)# Election 1
+# Election 1
 Solving Vulnhub's Election 1 machine.
 
 <div>
