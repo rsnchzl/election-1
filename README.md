@@ -27,6 +27,8 @@ Solving Vulnhub's Election 1 machine.
   <h2>  3. Enumeration and recognition</h2>
   The first thing to do is to identify the IP of the victim machine, for this we can play with "arp-scan --localnet --ignoredups", this will identify the IP addresses assigned in your local network (thanks to the --localnet parameter).
   <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/screenshotsarpscan.png"/> <br/>
-  Una vez tengamos identificado la dirección IP de la máquina victima lanzaremos un ping -c 1 "ip-maquina-victima"
- 
+  <br/>
+  
+  Una vez tengamos identificado la dirección IP de la máquina victima lanzaremos un ping -c 1 "ip-maquina-victima" para comprobar si recibimos respuesta, y de paso identificar el sistema operativo de la máquina victima gracias al ttl.
+  <img src="https://github.com/rsnchzl/election-1/blob/main/screenshots/enumeration/sceenshotsping.png"/> <br/>
 </div>
